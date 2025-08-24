@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Checkbox Selector</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Smart Checkbox Selector</h1>
+            <p>Enter keywords to automatically select matching checkboxes</p>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <label for="packages-keywords">
+                    <span class="label-text">📦 Packages Keywords</span>
+                    <span class="label-subtitle">One keyword per line</span>
+                </label>
+                <textarea
+                    id="packages-keywords"
+                    placeholder="Enter package keywords...&#10;Example:&#10;sports&#10;movies&#10;premium"
+                    rows="4"
+                ></textarea>
+            </div>
+
+            <div class="input-section">
+                <label for="vods-keywords">
+                    <span class="label-text">🎬 VODs Keywords</span>
+                    <span class="label-subtitle">One keyword per line</span>
+                </label>
+                <textarea
+                    id="vods-keywords"
+                    placeholder="Enter VOD keywords...&#10;Example:&#10;netflix&#10;hulu&#10;disney"
+                    rows="4"
+                ></textarea>
+            </div>
+
+            <div class="button-section">
+                <button id="apply-selection" class="apply-btn">
+                    <span class="btn-icon">✓</span>
+                    Apply Selection
+                </button>
+            </div>
+
+            <div id="message-area" class="message-area hidden">
+                <div id="message-content" class="message-content"></div>
+            </div>
+
+            <div class="stats-section">
+                <div class="stat-item">
+                    <span class="stat-label">Last Run:</span>
+                    <span id="last-run" class="stat-value">Never</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Checkboxes Found:</span>
+                    <span id="checkboxes-found" class="stat-value">-</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Matches Selected:</span>
+                    <span id="matches-selected" class="stat-value">-</span>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p class="footer-text">Keywords are saved automatically</p>
+        </footer>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

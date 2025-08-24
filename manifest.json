@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Smart Checkbox Selector",
+  "version": "1.0",
+  "description": "Automatically selects checkboxes on webpages based on user-defined keywords for Packages and VODs",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Smart Checkbox Selector"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "images/logos.png",
+    "48": "images/logos.png",
+    "128": "images/logos.png"
+  }
+}
